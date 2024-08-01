@@ -8,8 +8,8 @@ export class DropdrownDirective {
   @HostBinding('class.open') isOpen =false;
 
   @HostListener('click') toggleOpen() {
-    console.log('Dropdown state:', this.isOpen);
+   // console.log('Dropdown state:', this.isOpen);
     this.isOpen = !this.isOpen;
-    console.log('heloooooooo',this.isOpen);
+   // console.log('heloooooooo',this.isOpen);
   }
 }
