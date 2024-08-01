@@ -19,7 +19,7 @@ export class TeamService{
     }
 
 
-    getTeam(){
+    getTeams(){
       return this.teams;
     }
 }
