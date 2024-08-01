@@ -18,7 +18,7 @@ constructor(private teamService: TeamService){
 }
   ngOnInit() {
     
-    this.teams = this.teamService.teams;
+    this.teams=this.teamService.getTeam(); //= this.teamService.teams;
   }
 
   getEvent(e:Team)

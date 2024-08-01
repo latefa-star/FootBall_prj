@@ -17,4 +17,9 @@ export class TeamService{
     constructor(){
 
     }
+
+
+    getTeam(){
+      return this.teams;
+    }
 }
