@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TeamService } from '../../service/team.service';
 import { Team } from '../team.model';
 
 
@@ -12,17 +13,12 @@ export class TeamListComponent implements OnInit {
 
  @Output()  detail_event_2=new EventEmitter<Team>();
 
+constructor(private teamService: TeamService){
 
+}
   ngOnInit() {
     
-    this.teams = [
-      new Team('FC Barcelone', 'Més que un club', 'http://fc-barcelone.com/assets/img/fcb-logo-big.png'),
-      new Team(
-        'Real Madrid',
-        'Hala Madrid !',
-        'https://upload.wikimedia.org/wikipedia/fr/thumb/c/c7/Logo_Real_Madrid.svg/731px-Logo_Real_Madrid.svg.png'
-      )
-    ];
+    this.teams = this.teamService.teams;
   }
 
   getEvent(e:Team)
