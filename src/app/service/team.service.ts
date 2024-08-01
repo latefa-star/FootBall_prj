@@ -8,7 +8,12 @@ export class TeamService{
           'Real Madrid',
           'Hala Madrid !',
           'https://upload.wikimedia.org/wikipedia/fr/thumb/c/c7/Logo_Real_Madrid.svg/731px-Logo_Real_Madrid.svg.png'
-        )
+        ),
+        new Team(
+            'Iverpool',
+            'Hala Madrid !',
+            'https://upload.wikimedia.org/wikipedia/fr/thumb/c/c7/Logo_Real_Madrid.svg/731px-Logo_Real_Madrid.svg.png'
+          )
       ];
     constructor(){
 
