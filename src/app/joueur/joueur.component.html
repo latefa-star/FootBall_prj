@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-12">
+
+
+
+    
+      <app-edit-joueur (joueur)="receive($event)" ></app-edit-joueur>
+      <br><br>
+      <ul class="list-group" > 
+        <a class="list-group-item"  *ngFor="let j of joueurs" >
+          {{j.name}} {{j.age}}
+        </a>
+
+        
+
+      </ul>
+    </div>
+  </div>

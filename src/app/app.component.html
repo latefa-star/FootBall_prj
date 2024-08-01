@@ -1,0 +1,33 @@
+<app-header (event_selected)="receive_event($event)"></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" >
+           <app-teams *ngIf="feature==='teams'"></app-teams>
+           <app-joueur *ngIf="feature==='joueurs'"></app-joueur>
+           <app-player *ngIf="feature==='players'"></app-player>
+          
+           <!--div *ngIf="feature==='example'">
+                    <app-example >
+                            <p #title_book > la vie est belle </p>
+                            <p auteur > Moh Dib </p>
+                            <p description > la vie jhbghgugbajg"rjknjrnjest belle </p>
+                    </app-example>
+                    <app-example >
+                        <p #title_book > Type Script </p>
+                        <p auteur > younes </p>
+                        <p description >hgdgdfvhvfyh </p>
+                </app-example>
+            </div>
+            <div *ngIf="isVisible">                
+                <app-hooks *ngIf="feature==='hooks'"  [titre]="tit">
+                    
+                </app-hooks>
+                <button (click)="tit.label='JavaScript'">Ckick 1</button> 
+                <button  (click)="tit={label:'Math'}">Ckick 2</button>
+            </div-->
+        </div>
+
+    </div>
+</div>
+
+

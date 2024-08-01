@@ -1,0 +1,8 @@
+<div class="row">
+    <div class="col-sm-6">
+          <app-team-list (detail_event_2)="get_detail_event($event)"></app-team-list>
+    </div>
+    <div class="col-sm-6">
+        <app-team-detail  [detail_team]="team_detail" *ngIf="team_detail"></app-team-detail>
+    </div>
+</div>

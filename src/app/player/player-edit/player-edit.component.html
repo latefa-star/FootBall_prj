@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-xs-12">
+      <form>
+        <div class="row">
+          <div class="col-sm-5 form-group">
+            <label   [ngClass]="['large_txt','red_color']">Name</label>
+            <input class="form-control"   on-keyup="onKeyUp($event)">
+            <!--input class="form-control"   [(ngModel)]="name" name="name"-->
+            <!--p>{{name}}</p-->
+            <p [innerText]="name" ></p>
+          </div>
+          <div class="col-sm-2 form-group">
+            <label  [ngStyle]="{'font-style': 'italic'}">Age</label>
+            <input type="number" [(ngModel)]="age" class="form-control" #age_input name="age">
+            {{age_input.value}}
+           
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12">
+            <button class="btn btn-success" (click)="onClick('llll')" >Add</button>
+            <button class="btn btn-danger" type="button" >Delete</button>
+            <button class="btn btn-primary" type="button">Clear</button>
+            
+            
+            
+             
+          </div>
+        </div>
+      </form>
+    </div>
+</div>

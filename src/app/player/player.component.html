@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-sm-12">
+
+
+
+      <input class="form-control" #title_input  placeholder="Song 1" >
+      <input class="form-control" #title_input_2  placeholder="Song 2" >
+       
+      <button (click)="onClick()">click</button>
+      <app-player-edit  #player   [songName]="title_input.value"></app-player-edit>
+      <br>
+      <app-player-edit    [songName]="title_input_2.value"></app-player-edit>
+      <br>
+      <!--button class="btn btn-success" (click)="player.play();  onPlay()">play</button>
+      <button class="btn btn-primary" (click)="player.pause(); onPause()">pause</button-->
+      <button class="btn btn-success" (click)="playerEditComponent.play();  onPlay()">play</button>
+      <button class="btn btn-primary" (click)="playerEditComponent.pause(); onPause()">pause</button>
+      <hr>
+      <ul class="list-group"> 
+        <a class="list-group-item">
+          {{isPlaying? 'play': 'Pause'}}
+        </a>
+
+        
+
+      </ul>
+    </div>
+  </div>
