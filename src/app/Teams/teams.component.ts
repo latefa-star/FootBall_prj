@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { LoggingService } from "../service/loggin.service";
 import { Team } from "./team.model";
 
 @Component({
@@ -9,8 +10,16 @@ import { Team } from "./team.model";
 
 export class TeamsComponent
 {
-    
     team_detail:Team;
+    constructor(private logginService: LoggingService)
+    {
+          
+    }
+     onClick()
+     {
+        this.logginService.increment();
+     }
+    
 
     get_detail_event(event:Team)
     {

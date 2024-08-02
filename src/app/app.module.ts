@@ -46,7 +46,6 @@ import { LoggingService } from './service/loggin.service';
   ],
   providers: [
     TeamService,
-    LoggingService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
