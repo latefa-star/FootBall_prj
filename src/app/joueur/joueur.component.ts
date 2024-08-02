@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { PlayerService } from '../service/player.service';
 import { Joueur } from './joueur.model';
 
 @Component({
@@ -9,11 +10,15 @@ import { Joueur } from './joueur.model';
 export class JoueurComponent implements OnInit {
 
 joueurs:Joueur[];
+constructor(private playerService: PlayerService)
+{
+
+}
 
   ngOnInit()
   {
     
-    this.joueurs=[new Joueur('messi',30), new Joueur('Rolaldo',32), new Joueur('Mbappe',23)];
+    this.joueurs=this.playerService.getPlayer();
   }
 
   receive(joueur: Joueur)

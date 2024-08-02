@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { LoggingService } from '../../service/loggin.service';
 import { TeamService } from '../../service/team.service';
 import { Team } from '../team.model';
 
@@ -13,12 +14,13 @@ export class TeamListComponent implements OnInit {
 
  @Output()  detail_event_2=new EventEmitter<Team>();
 
-constructor(private teamService: TeamService){
+constructor(private teamService: TeamService,private logService: LoggingService){
 
 }
   ngOnInit() {
     
     this.teams=this.teamService.getTeams(); //= this.teamService.teams;
+    
   }
 
   getEvent(e:Team)

@@ -1,5 +1,8 @@
+import { Injectable } from "@angular/core";
 import { Team } from "../Teams/team.model";
+import { LoggingService } from "./loggin.service";
 
+@Injectable()
 export class TeamService{
 
     teams:Team[]=[
@@ -15,12 +18,13 @@ export class TeamService{
             'https://upload.wikimedia.org/wikipedia/fr/thumb/c/c7/Logo_Real_Madrid.svg/731px-Logo_Real_Madrid.svg.png'
           )
       ];
-    constructor(){
+    constructor(private logService: LoggingService){
 
     }
 
 
     getTeams(){
+      this.logService.log('Warning')
       return this.teams;
     }
 }

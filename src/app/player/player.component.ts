@@ -1,5 +1,7 @@
-import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { PlayerService } from '../service/player.service';
 import { PlayerEditComponent } from './player-edit/player-edit.component';
+
 
 @Component({
   selector: 'app-player',
@@ -8,10 +10,17 @@ import { PlayerEditComponent } from './player-edit/player-edit.component';
 })
 export class PlayerComponent {
   isPlaying:boolean;
+  
   name:string;
   @ViewChild(PlayerEditComponent) playerEditComponent: PlayerEditComponent;
   @ViewChild('title_input') title: ElementRef;
   @ViewChildren(PlayerEditComponent) players: QueryList<PlayerEditComponent>;
+
+
+  constructor(private playerService: PlayerService)
+  {
+
+  }
   onPlay()
   {
    this.isPlaying=true;
@@ -26,5 +35,7 @@ export class PlayerComponent {
     //console.log(this.title.nativeElement.value);
     console.log(this.players.forEach(p => p.play()));
   }
+
+ 
 
 }

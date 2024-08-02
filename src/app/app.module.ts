@@ -19,6 +19,7 @@ import { HighlightDirective } from './directive/highlight.directive';
 import { HideDirective } from './directive/hide.directive';
 import { DropdrownDirective } from './directive/dropdrown.directive';
 import { TeamService } from './service/team.service';
+import { LoggingService } from './service/loggin.service';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TeamService } from './service/team.service';
   ],
   providers: [
     TeamService,
+    LoggingService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
