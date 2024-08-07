@@ -1,4 +1,18 @@
-<app-header (event_selected)="receive_event($event)"></app-header>
+
+
+
+
+
+<!--app-header (event_selected)="receive_event($event)"></app-header-->
+<app-header ></app-header>
+<router-outlet></router-outlet>
+
+<!--
+
+
+
+    
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12" >
@@ -6,7 +20,7 @@
            <app-joueur *ngIf="feature==='joueurs'"></app-joueur>
            <app-player *ngIf="feature==='players'"></app-player>
           
-           <!--div *ngIf="feature==='example'">
+           <div *ngIf="feature==='example'">
                     <app-example >
                             <p #title_book > la vie est belle </p>
                             <p auteur > Moh Dib </p>
@@ -25,9 +39,9 @@
                 <button (click)="tit.label='JavaScript'">Ckick 1</button> 
                 <button  (click)="tit={label:'Math'}">Ckick 2</button>
             </div-->
-        </div>
+            
+        <!--/div>
 
     </div>
 </div>
-
-
+-->

@@ -9,6 +9,9 @@
 
     <div class="col-sm-12">
        
-        <app-team-item  *ngFor="let team of teams" [t]="team"  (detail_event)="getEvent($event)"></app-team-item>
+        <app-team-item  *ngFor="let team of teams" [t]="team"   (detail_event)="getEvent($event)"></app-team-item>
+   
+        <!--app-team-item  *ngFor="let team of teams" [t]="team"  [routerLink]="['detail-teams', team.id]" ></app-team-item-->
+   
     </div>
     </div>

@@ -20,6 +20,14 @@ import { HideDirective } from './directive/hide.directive';
 import { DropdrownDirective } from './directive/dropdrown.directive';
 import { TeamService } from './service/team.service';
 import { LoggingService } from './service/loggin.service';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoute: Routes = [
+  { path: '', component:TeamsComponent },
+  { path: 'players', component: JoueurComponent },
+  { path: 'teams', component: TeamsComponent },
+  { path: 'detail-teams/:id', component: TeamDetailComponent }
+];
 
 @NgModule({
   declarations: [
@@ -42,7 +50,8 @@ import { LoggingService } from './service/loggin.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoute)
   ],
   providers: [
     TeamService,

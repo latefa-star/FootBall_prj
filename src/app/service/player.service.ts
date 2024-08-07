@@ -17,4 +17,20 @@ export class PlayerService {
     this.loggingService.log('GET PLAYERS');
     return this.players;
    }
+
+
+   addPlayer(joueur: Joueur):void
+   {
+    this.players.push(joueur);
+   }
+
+   
+
+   toPlayer(joueurs: Joueur[]){
+    for (let jd of joueurs) {
+        this.addPlayer(jd);
+    }
+}
+
+
 }

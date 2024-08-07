@@ -4,27 +4,25 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-sm-12">
-     Nom
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="btn-group">
-        <button type="button"
-                class="btn btn-primary dropdown-toggle">
-          Manage Team <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="">To Players</a></li>
-          <li><a href="">Edit Team</a></li>
-          <li><a href="">Delete Team</a></li>
-        </ul>
+  <div class="col-sm-3">
+  <ul class="navbar-nav ms-auto"  >
+    <li class="nav-item dropdown" appDropdrown>
+      <a class="nav-link dropdown-toggle"  id="navbarDropdown" type="button"
+      class="btn btn-primary dropdown-toggle">
+        Manage Team 
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" (click)="addToPlayer()">To Players</a>
+        <a class="dropdown-item" (click)="onNavigate('teams')">Edit Team</a>
+        <a class="dropdown-item" (click)="onNavigate('players')">Delete Team</a>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
+</div>
+  
+  <br>
+ 
 
   <div class="row">
     <div class="col-sm-12">
@@ -35,8 +33,8 @@
   <div class="row">
     <div class="col-xs-12">
       <ul class="list-group">
-        <li class="list-group-item">
-          Team players list
+        <li class="list-group-item" *ngFor="let p of detail_team.joueurs">
+          Name: {{p.name}}, Age: {{p.age}} year old
         </li>
       </ul>
     </div>

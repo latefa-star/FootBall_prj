@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { LoggingService } from "../service/loggin.service";
 import { Team } from "./team.model";
 
@@ -8,9 +8,10 @@ import { Team } from "./team.model";
     styleUrl:'./teams.component.scss'
 })
 
-export class TeamsComponent
+export class TeamsComponent 
 {
     team_detail:Team;
+    
     constructor(private logginService: LoggingService)
     {
           
@@ -25,5 +26,7 @@ export class TeamsComponent
     {
    this.team_detail=event;
     }
+
+   
 }
 

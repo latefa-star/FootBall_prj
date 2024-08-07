@@ -27,8 +27,5 @@ onClick()
     this.joueurs=this.playerService.getPlayer();
   }
 
-  receive(joueur: Joueur)
-  {
-  this.joueurs.push(joueur);
-  }
+
 }
