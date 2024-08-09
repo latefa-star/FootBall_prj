@@ -21,13 +21,9 @@ import { DropdrownDirective } from './directive/dropdrown.directive';
 import { TeamService } from './service/team.service';
 import { LoggingService } from './service/loggin.service';
 import { RouterModule, Routes } from '@angular/router';
+import { EditTeamComponent } from './teams/edit-team/edit-team.component';
 
-const appRoute: Routes = [
-  { path: '', component:TeamsComponent },
-  { path: 'players', component: JoueurComponent },
-  { path: 'teams', component: TeamsComponent },
-  { path: 'detail-teams/:id', component: TeamDetailComponent }
-];
+
 
 @NgModule({
   declarations: [
@@ -45,13 +41,13 @@ const appRoute: Routes = [
     EditJoueurComponent,
     HighlightDirective,
     HideDirective,
-    DropdrownDirective
+    DropdrownDirective,
+    EditTeamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    RouterModule.forRoot(appRoute)
+    FormsModule
   ],
   providers: [
     TeamService,

@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { interval, Subscription } from "rxjs";
 import { LoggingService } from "../service/loggin.service";
 import { Team } from "./team.model";
 
@@ -8,14 +9,22 @@ import { Team } from "./team.model";
     styleUrl:'./teams.component.scss'
 })
 
-export class TeamsComponent 
+export class TeamsComponent  implements OnInit, OnDestroy
 {
+
     team_detail:Team;
+   // numSub:Subscription;
     
     constructor(private logginService: LoggingService)
-    {
-          
+    {}
+    ngOnInit(): void {
+       // const num=interval(1000);
+       // this.numSub=num.subscribe((n:number)=>
+       // {console.log(n);})
+
     }
+
+
      onClick()
      {
         this.logginService.increment();
@@ -25,6 +34,11 @@ export class TeamsComponent
     get_detail_event(event:Team)
     {
    this.team_detail=event;
+    }
+
+    ngOnDestroy()
+    {
+         //this.numSub.unsubscribe();
     }
 
    

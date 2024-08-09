@@ -4,12 +4,12 @@
         <div class="row">
           <div class="col-sm-5 form-group">
             <label >Name</label>
-            <input class="form-control"  #name_ref>
+            <input class="form-control"  #name_ref  [(ngModel)]="joueur.name"  [ngModelOptions]="{standalone: true}">
            
           </div>
           <div class="col-sm-2 form-group">
             <label  >Age</label>
-            <input type="number" #age_ref class="form-control" >
+            <input type="number" #age_ref class="form-control" [(ngModel)]="joueur.age" [ngModelOptions]="{standalone: true}">
            
            
           </div>
@@ -18,7 +18,7 @@
         <div class="row">
           <div class="col-xs-12">
             <button class="btn btn-success" (click)="add_player()" >Add</button>
-            <button class="btn btn-danger" type="button" >Delete</button>
+            <button class="btn btn-danger" type="button"  (click)="updatePlayer()">Edit</button>
             <button class="btn btn-primary" type="button">Clear</button>
             
             

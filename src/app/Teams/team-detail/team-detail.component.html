@@ -13,9 +13,10 @@
         Manage Team 
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" (click)="addToPlayer()">To Players</a>
-        <a class="dropdown-item" (click)="onNavigate('teams')">Edit Team</a>
-        <a class="dropdown-item" (click)="onNavigate('players')">Delete Team</a>
+        <!--a class="dropdown-item" (click)="addToPlayer()">To Players</a-->
+        <a class="dropdown-item" >To Players</a>
+        <a class="dropdown-item" (click)="gotoEdit()">Edit Team</a>
+        <a class="dropdown-item" >Delete Team</a>
       </div>
     </li>
   </ul>
@@ -26,14 +27,14 @@
 
   <div class="row">
     <div class="col-sm-12">
-      {{detail_team.name}}{{detail_team.description}}
+      {{team.name}}       &nbsp; {{team.description}}
     </div>
   </div>
   
   <div class="row">
     <div class="col-xs-12">
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let p of detail_team.joueurs">
+        <li class="list-group-item" *ngFor="let p of team.joueurs">
           Name: {{p.name}}, Age: {{p.age}} year old
         </li>
       </ul>

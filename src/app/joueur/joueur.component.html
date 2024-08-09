@@ -2,17 +2,18 @@
     <div class="col-sm-12">
 
 
-      <button (click)="onClick()">Increment J</button>
+      <!--button (click)="onClick()">Increment J</button-->
     
-      <app-edit-joueur  ></app-edit-joueur>
-      <br><br>
+     
+      
       <ul class="list-group" > 
-        <a class="list-group-item"  *ngFor="let j of joueurs" >
-          {{j.name}} {{j.age}}
+        <a class="list-group-item" *ngFor="let j of joueurs" [routerLink]="['/joueurs', j.id]">
+          {{ j.name }} {{ j.age }}
         </a>
-
         
 
       </ul>
+      <br><br>
+      <router-outlet></router-outlet>
     </div>
   </div>

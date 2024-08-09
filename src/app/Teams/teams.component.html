@@ -3,10 +3,22 @@
 <div class="row">
     
     <div class="col-sm-6">
-          <app-team-list (detail_event_2)="get_detail_event($event)"></app-team-list>
+          <!--app-team-list (detail_event_2)="get_detail_event($event)"></app-team-list-->
+          <app-team-list></app-team-list>
     </div>
-    <div class="col-sm-6">
+    <!--div class="col-sm-6">
         <app-team-detail  [detail_team]="team_detail" *ngIf="team_detail"></app-team-detail>
-    </div>
+    </div-->
+    <router-outlet></router-outlet>
+    
 </div>
+<!--div class="row">
+    <div class="col-sm-12">
+        <label >Name: </label>
+        <input class="form-control"  type="text"  class="">
+        <button class="btn btn-success" [routerLink]="['/joueurs',1]" [queryParams]="{'is-valid':true}">Send</button>
+        
+  </div>
+        
+</div-->
 

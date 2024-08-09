@@ -10,7 +10,7 @@ export class TeamItemComponent implements OnInit {
   img_team="https://www.assuropoil.fr/wp-content/uploads/2023/07/avoir-un-chat-sante.jpg"
   isDisable=true;
   @Input() t:Team;
-  @Output() detail_event= new EventEmitter<Team>();
+  //@Output() detail_event= new EventEmitter<Team>();
 
   
 
@@ -20,11 +20,11 @@ export class TeamItemComponent implements OnInit {
    },3000)
   }
 
-
+/*
   onSelect()
   {
     this.detail_event.emit(this.t);
   }
-
+*/
   
 }

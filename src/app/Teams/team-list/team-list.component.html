@@ -1,7 +1,7 @@
 <div class="row">
 
 <div class="col-sm-12">
-    <button class="btn btn-success"> Team +</button>
+    <button class="btn btn-success" routerLink="add"> Team +</button>
 </div>
 </div>
 <hr>
@@ -9,9 +9,11 @@
 
     <div class="col-sm-12">
        
-        <app-team-item  *ngFor="let team of teams" [t]="team"   (detail_event)="getEvent($event)"></app-team-item>
+        <!--app-team-item  *ngFor="let team of teams" [t]="team"   (detail_event)="getEvent($event)"></app-team-item-->
    
-        <!--app-team-item  *ngFor="let team of teams" [t]="team"  [routerLink]="['detail-teams', team.id]" ></app-team-item-->
+        <app-team-item  *ngFor="let team of teams" [t]="team"  [routerLink]="['/teams', team.id]" routerLinkActive="active"></app-team-item>
+   
+      
    
     </div>
     </div>
