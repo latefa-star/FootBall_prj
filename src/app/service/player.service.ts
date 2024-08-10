@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { EditJoueurComponent } from '../joueur/edit-joueur/edit-joueur.component';
 import { Joueur } from '../joueur/joueur.model';
 import { LoggingService } from './loggin.service';
@@ -9,6 +10,7 @@ import { LoggingService } from './loggin.service';
 })
 export class PlayerService {
  players:Joueur[];
+ playerChange=new Subject<string>();
 
   
   constructor(private loggingService: LoggingService) {
@@ -28,6 +30,7 @@ export class PlayerService {
    addPlayer(joueur: Joueur):void
    {
     this.players.push(joueur);
+    this.playerChange.next('player added successfuly');
    }
 
    
