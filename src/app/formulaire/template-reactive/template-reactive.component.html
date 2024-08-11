@@ -1,0 +1,54 @@
+<div class="container">
+     <div class="row">
+ 
+ 
+         <div class="col-sm-8">
+             <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+               <div formGroupName="user">
+                     <div class="form-group">
+                         <label for="exampleFormControlInput1">Name *</label>
+                         <input type="name" class="form-control" id="name" name="name" formControlName="name">
+                         <span *ngIf="getName?.invalid && getName?.touched">Name invalide</span>
+                     </div>
+ 
+                     <div class="form-group">
+                             <label for="exampleFormControlInput1">Email address *</label>
+                             <input type="email" class="form-control" name="email" formControlName="email" >
+                             
+                             <span *ngIf="getEmail?.invalid && getEmail?.touched">Email invalide</span>
+                     
+                     </div>
+                    
+                </div> 
+                  
+                     <div class="form-group">
+                         <label for="exampleFormControlSelect1">Profession</label>
+                         <select class="form-control" id="profession" name="profession" formControlName="profession" >
+                         
+                         <option [value]="profession.label" *ngFor="let profession of professions" >{{profession.label}}</option>
+                         </select>
+                     </div>
+ 
+                     <div class="form-group">
+                         <label for="exampleFormControlSelect2">Gender</label>
+                         <select class="form-control" id="gender" name="gender" formControlName="gender"  >
+                         <option>Male</option>
+                         <option>Female</option>
+                         </select>
+                     </div>
+                     <br><br>
+                     <button type="submit" class="btn btn-success"  [disabled]="userForm.invalid">Submit</button>
+ 
+                 
+             </form>
+         </div>
+     </div>
+     <!--div class="row" >
+         <div class="col-sm-8" *ngIf="data">
+             <label>Name: {{data.name}}</label><br>
+             <label>Email: {{data.email}}</label><br>
+             <label>Gender: {{data.gender}}</label><br>
+             <label>Profession: {{data.profession}}</label><br>
+         </div>
+     </div-->
+ </div>

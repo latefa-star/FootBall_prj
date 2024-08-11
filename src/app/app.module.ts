@@ -10,7 +10,7 @@ import { TeamDetailComponent } from './Teams/team-detail/team-detail.component';
 import { TeamItemComponent } from './Teams/team-list/team-item/team-item.component';
 import { PlayerComponent } from './player/player.component';
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { ExampleComponent } from './example/example.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { JoueurComponent } from './joueur/joueur.component';
@@ -23,6 +23,7 @@ import { LoggingService } from './service/loggin.service';
 import { RouterModule, Routes } from '@angular/router';
 import { EditTeamComponent } from './teams/edit-team/edit-team.component';
 import { TemplateDrivenComponent } from './formulaire/template-driven/template-driven.component';
+import { TemplateReactiveComponent } from './formulaire/template-reactive/template-reactive.component';
 
 
 
@@ -44,12 +45,14 @@ import { TemplateDrivenComponent } from './formulaire/template-driven/template-d
     HideDirective,
     DropdrownDirective,
     EditTeamComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    TemplateReactiveComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     TeamService,

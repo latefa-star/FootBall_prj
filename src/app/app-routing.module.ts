@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TemplateDrivenComponent } from './formulaire/template-driven/template-driven.component';
+import { TemplateReactiveComponent } from './formulaire/template-reactive/template-reactive.component';
 import { EditJoueurComponent } from './joueur/edit-joueur/edit-joueur.component';
 import { JoueurComponent } from './joueur/joueur.component';
 import { EditTeamComponent } from './teams/edit-team/edit-team.component';
@@ -18,6 +19,7 @@ const appRoute: Routes = [
   ]
     },
     { path: 'form', component:TemplateDrivenComponent },
+    { path: 'formReactive', component:TemplateReactiveComponent },
   
   { path: 'joueurs', component: JoueurComponent, children:[
     { path: ':id', component: EditJoueurComponent }
