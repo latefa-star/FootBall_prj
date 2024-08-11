@@ -22,6 +22,7 @@ import { TeamService } from './service/team.service';
 import { LoggingService } from './service/loggin.service';
 import { RouterModule, Routes } from '@angular/router';
 import { EditTeamComponent } from './teams/edit-team/edit-team.component';
+import { TemplateDrivenComponent } from './formulaire/template-driven/template-driven.component';
 
 
 
@@ -42,7 +43,8 @@ import { EditTeamComponent } from './teams/edit-team/edit-team.component';
     HighlightDirective,
     HideDirective,
     DropdrownDirective,
-    EditTeamComponent
+    EditTeamComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
